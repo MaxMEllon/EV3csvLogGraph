@@ -10,3 +10,4 @@ class CsvFile:
         print("--- csv file list---\n")
         for index, file in enumerate(csvFiles):
             print('{0} : {1}' . format(index, file))
+        return csvFiles

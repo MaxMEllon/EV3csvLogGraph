@@ -7,8 +7,8 @@ def main():
     path = GetPath()
     graph = Graph()
 
-    fileList = csvList.pathlist()
-    graph.graph()
+    filePathList = csvList.pathlist()
+    graph.graph(filePathList)
 
 if __name__ == '__main__':
     main()
