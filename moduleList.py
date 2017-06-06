@@ -1,12 +1,16 @@
 class ModuleList:
-    def module(self):
-        print("--- module list ---")
-        print("time")
-        print("turn")
-        print("speed")
-        print("battery")
-        print("angleL")
-        print("angleR")
-        print("bright")
-        print("gyro")
-        print("sonar")
+    def colums(self):
+        return [
+                'time',
+                'turn',
+                'speed',
+                'battery',
+                'angleL',
+                'angleR',
+                'bright',
+                'gyro',
+                'sonar'
+                ]
+    def show(self):
+        for colum in self.colums():
+            print(colum)

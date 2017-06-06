@@ -14,12 +14,12 @@ class Graph:
             exit()
 
         module = ModuleList()
-        module.module()
+        module.show()
 
         selectModule = input("select module => ")
         if selectModule == 'exit':
             exit()
-        df = pd.read_csv(open(csvFile), names=['time', 'turn', 'speed', 'battery', 'angleL', 'angleR', 'bright', 'gyro', 'sonar'], encoding='utf-8', engine='python')
+        df = pd.read_csv(open(csvFile), names=module.colums(), encoding='utf-8', engine='python')
         print(df.describe())
         lineNum = sum(1 for line in open(csvFile))
         print(lineNum)
