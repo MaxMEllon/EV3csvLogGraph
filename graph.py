@@ -8,21 +8,22 @@ from moduleList import ModuleList
 class Graph:
     def graph(self, filePathList):
         index = input("select csv file. if you want to close this program, then select `q` => ")
-        csvFile = filePathList[int(index)]
-
-        if csvFile == 'q':
+        if index == 'q':
             exit()
 
         module = ModuleList()
         module.show()
 
-        selectModule = input("select module => ")
-        if selectModule == 'exit':
+        selectedColumn = input("select colum. if you want to close this program, then select `q` => ")
+
+        if selectedModule == 'q':
             exit()
-        df = pd.read_csv(open(csvFile), names=module.colums(), encoding='utf-8', engine='python')
+
+        csvFile = filePathList[int(index)]
+        df = pd.read_csv(open(csvFile), names=module.columns(), encoding='utf-8', engine='python')
         print(df.describe())
         lineNum = sum(1 for line in open(csvFile))
-        plt.plot(range(0, lineNum), df[selectModule], marker="o")
+        plt.plot(range(0, lineNum), df[selectedColumn], marker="o")
         plt.title("sample code")
         plt.xlabel("sec")
         plt.ylabel("value")

@@ -1,5 +1,5 @@
 class ModuleList:
-    def colums(self):
+    def columns(self):
         return [
                 'time',
                 'turn',
@@ -12,5 +12,5 @@ class ModuleList:
                 'sonar'
                 ]
     def show(self):
-        for colum in self.colums():
-            print(colum)
+        for column in self.columns():
+            print(column)
