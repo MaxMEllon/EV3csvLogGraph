@@ -12,11 +12,16 @@ class Graph:
         module = ModuleList()
 
         csvFile = input("select csv file => ")
+        if csvFile == 'exit':
+            exit()
         csv = csvPath + csvFile
 
         module.module()
 
         selectModule = input("select module => ")
+        if selectModule == 'exit':
+            exit()
+
 
         df = pd.read_csv(csv, names=['time', 'turn', 'speed', 'battery', 'angleL', 'angleR', 'bright', 'gyro', 'sonar'])
         print(df.describe())
