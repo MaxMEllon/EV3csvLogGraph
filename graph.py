@@ -11,7 +11,8 @@ class Graph:
         csvPath = path.path()
         module = ModuleList()
 
-        csvFile = input("select csv file => ")
+        index = input("select csv file => ")
+        csvFile = csvPath[int(index)]
         if csvFile == 'exit':
             exit()
         csv = csvPath + csvFile
