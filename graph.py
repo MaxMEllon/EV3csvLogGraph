@@ -16,7 +16,7 @@ class Graph:
 
         selectedColumn = input("select colum. if you want to close this program, then select `q` => ")
 
-        if selectedModule == 'q':
+        if selectedColumn == 'q':
             exit()
 
         csvFile = filePathList[int(index)]
