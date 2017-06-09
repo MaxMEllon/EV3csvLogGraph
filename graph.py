@@ -22,8 +22,7 @@ class Graph:
         csvFile = filePathList[int(index)]
         df = pd.read_csv(open(csvFile), names=module.columns(), encoding='utf-8', engine='python')
         print(df.describe())
-        lineNum = sum(1 for line in open(csvFile))
-        plt.plot(range(0, lineNum), df[selectedColumn], marker="o")
+        plt.plot(df[selectedColumn], marker="o")
         plt.title("sample code")
         plt.xlabel("sec")
         plt.ylabel("value")
